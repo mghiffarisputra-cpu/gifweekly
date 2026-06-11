@@ -1,38 +1,51 @@
-<html>
-    <head>
-        <title>
-            WEB TI GIF - 2026
-        </title>
-    </head>
-    <link rel="stylesheet" href="style.css">
-    <body>
-        <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="gif.html">profil</a></li>
-    <li><a href="contact">Kontak</a></li>
-  </ul>
-</nav> 
-    <h1 align="center">penjelasan singkat
-       <table border="1" align="center" cellspacing="0"
-       cellpadding="10px">
-       <nav>
-         <tr>
-            <td><a href="index.html">home</a></td>
-            <td><a href="gif.html">profile</a></td>
-            <td><a href="contact.html">contact</a></td>
-            <td><a href="mahasiswa.html">data mahasiswa</a></td>
-         </tr>
-       </table>
-       <img src="c:\Users\UNIMUS GKB II\Downloads\web ti g\download.jpg"/><br>
-       <nav>
-    </h1>
-        <p>
-            HTML pertama kali dibuat oleh Tim Berners-Lee pada tahun 1991.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB TI GIF – 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            Beliau adalah seorang ilmuwan di CERN (organisasi riset di Eropa).
-            Tujuannya sederhana:
-            memudahkan para peneliti berbagi dokumen melalui jaringan komputer
-        </p>
-    </body>
+<nav>
+  <ul>
+    <li><a href="index.php" class="active">Home</a></li>
+    <li><a href="gif.php">Profil</a></li>
+    <li><a href="contact.php">Kontak</a></li>
+    <li><a href="mahasiswa.php">Mahasiswa</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <span class="badge">Web TI GIF · 2026</span>
+    <h1>Selamat Datang</h1>
+    <p>Pengenalan singkat tentang sejarah dan penggunaan HTML dalam pengembangan web modern.</p>
+  </div>
+
+  <div class="card">
+    <h2>Apa itu HTML?</h2>
+    <div class="info-box">
+      HTML pertama kali dibuat oleh <strong>Tim Berners-Lee</strong> pada tahun 1991.
+      Beliau adalah seorang ilmuwan di <strong>CERN</strong> (organisasi riset di Eropa).
+      Tujuannya sederhana: memudahkan para peneliti berbagi dokumen melalui jaringan komputer.
+      Kini HTML menjadi fondasi utama setiap halaman web di seluruh dunia.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="card">
+    <h2>Navigasi Cepat</h2>
+    <div class="social-links">
+      <a href="index.php" class="social-link">🏠 Home</a>
+      <a href="gif.php" class="social-link">👤 Profil</a>
+      <a href="contact.php" class="social-link">📬 Kontak</a>
+      <a href="mahasiswa.php" class="social-link">🎓 Data Mahasiswa</a>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
