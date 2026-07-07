@@ -1,3 +1,27 @@
+<?php
+
+  require 'fungsi.php';
+
+  $query = "SELECT * FROM mahasiswa";
+
+  $mahasiswas = tampildata($query); //ambil data (fetch) dari mahasiswa
+
+
+ ///ambil data (fetch) dari mahasiswa
+ 
+
+ /// mysqli_fetch_row ///numerik
+ /// mysqli_fetch_assoc ///associative
+ /// mysqli_fetch_array ///numerric & associative
+ /// mysqli_fetch_object ///nanti di framework lebih banyak pakai object
+
+  
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -43,33 +67,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Kholid</td>
-            <td>123456</td>
-            <td>kholid@example.com</td>
-            <td>Informatika</td>
-            <td>08123456789</td>
-            <td><img src="foto/kholid.jpg" alt="Foto Kholid" width="50"></td>
-            <td>
-              <a href="contact.php"><button>Edit</button></a>
-              <a href="contact.php"><button>Hapus</button></a>
-            </td>
+          <?php
+           $no = 1;
+           foreach ($mahasiswas as $mhs):
+          ?>
+         <tr>
+           <td><?= $no++; ?></td>
+           <td><?= $mhs['nama']; ?></td>
+           <td><?= $mhs['nim']; ?></td>
+           <td><?= $mhs['email']; ?></td>
+           <td><?= $mhs['prodi']; ?></td>
+           <td><?= $mhs['no_hp']; ?></td>
+           <td>
+             <img src="foto/<?= $mhs['foto']; ?>" alt="Foto <?= $mhs['nama']; ?>" width="50">
+           </td>
+           <td>
+              <a href="editdata.php?id=<?= $mhs['id']; ?>">
+            <button>Edit</button>
+            </a>
+              <a href="hapusdata.php?id=<?= $mhs['id']; ?>" onclick="return confirm('Yakin ingin menghapus data ini?');">
+               <button>Hapus</button>
+             </a>
+           </td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>Dik</td>
-            <td>789012</td>
-            <td>dik@example.com</td>
-            <td>Teknologi Informasi</td>
-            <td>08987654321</td>
-            <td><img src="foto/dik.jpg" alt="Foto Dik" width="50"></td>
-            <td>
-              <a href="contact.php"><button>Edit</button></a>
-              <a href="contact.php"><button>Hapus</button></a>  
-            </td>
-          </tr>
-        </tbody>
+          <?php endforeach; ?>
+       </tbody>
       </table>
     </div>
   </div>
@@ -104,6 +126,8 @@
             <td>4,3</td>
             <td>4,4</td>
           </tr>
+        </tbody>
+      </table>
         </tbody>
       </table>
     </div>

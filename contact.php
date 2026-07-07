@@ -25,7 +25,7 @@
   </div>
 
   <div class="card">
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
       <div class="form-grid">
 
         <!-- Nama -->
